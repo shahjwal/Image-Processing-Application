@@ -1,0 +1,23 @@
+# loading multiple images at once.
+load images/manhattan-small.png man
+load res/bird.png bird
+load res/bird.ppm lion
+brighten 100 man bright
+blur man blur
+sharpen man sharpen
+horizontal-flip man VFlip
+vertical-flip man VFlip
+sepia man sepia
+red-component man redC
+green-component man greenC
+blue-component man blueC
+luma-component man lumaC
+value-component man valueC
+intensity-component man intensityC
+rgb-split man red green blue
+rgb-combine new red green blue
+# Manipulating different images sequentially
+brighten 50 bird birdbright
+blur lion blurlion
+#overwriting a image.
+sharpen bird blurlion

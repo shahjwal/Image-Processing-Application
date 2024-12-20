@@ -1,0 +1,153 @@
+
+# loading 2 images at the same time.
+
+load res/bird.png bird
+load res/lion.jpeg lion
+
+# Applying Brighten filter with positive intensity.
+
+brighten 100 bird bright
+
+save res/birdBright.jpg bright
+
+# Applying Brighten filter with negative intensity.
+
+brighten -100 bird darken
+
+save res/birdDarken.jpg darken
+
+# Applying blur and Sharpen Filter.
+
+blur bird blur
+sharpen bird sharpen
+
+save res/birdBlur.jpg blur
+save res/birdSharpen.jpg sharpen
+
+# Applying horizontal and vertical flip.
+
+horizontal-flip bird hflip
+vertical-flip bird vflip
+
+save res/birdHorizontal.jpg hflip
+save res/birdVertical.jpg vflip
+
+# Applying Sepia filter.
+
+sepia bird sepia
+
+save res/birdSepia.jpg sepia
+
+# Applying component filters.
+
+red-component bird redC
+green-component bird greenC
+blue-component bird blueC
+luma-component bird luma
+value-component bird value
+intensity-component bird intensity
+
+save res/birdRedComponent.jpg redC
+save res/birdGreenComponent.jpg greenC
+save res/birdBlueComponent.jpg blueC
+save res/birdLuma.jpg luma
+save res/birdValue.jpg value
+save res/birdIntensity.jpg intensity
+
+# Applying rgb-split command.
+
+rgb-split bird red green blue
+
+save res/birdRedSplit.jpg red
+save res/birdGreenSplit.jpg green
+save res/birdBlueSplit.jpg blue
+
+# Applying rgb-combine command.
+
+rgb-combine combine red green blue
+
+save res/birdCombine.jpg combine
+
+# Trying to save the loaded bird.png to bird.ppm
+
+save res/bird.ppm bird
+
+# Trying to save the loaded lion.jpeg to lion.png
+
+save res/lion.png lion
+
+# Histogram
+
+histogram bird hist
+histogram lion histLion
+
+# Applying Splits
+
+blur bird blurBird50 split 50
+sharpen bird sharpenBird50 split 50
+sepia bird sepiaBird50 split 50
+red-component bird redBird50 split 50
+blue-component bird blueBird50 split 50
+green-component bird greenBird50 split 50
+luma-component bird lumaBird50 split 50
+value-component bird valueBird50 split 50
+intensity-component bird intensityBird50 split 50
+levels-adjust 0 100 255 bird adjustedBird50 split 50
+color-correct bird correctedBird50 split 50
+
+# Applying  Level-adjust
+
+levels-adjust 0 100 255 bird adjustedBird1
+levels-adjust 10 130 240 bird adjustedBird2
+
+# Applying Color-correction
+
+color-correct bird correctedBird
+
+# Applying Compression
+
+compress 70 bird birdCompress70
+compress 30 bird birdCompress30
+
+# Mask images
+
+load res/birdMask.jpg birdMask
+blur bird birdMask birdMaskBlur
+sharpen bird birdMask birdMaskSharpen
+sepia bird birdMask birdMaskSepia
+red-component bird birdMask birdMaskRed
+green-component bird birdMask birdMaskGreen
+blue-component bird birdMask birdMaskBlue
+luma-component bird birdMask birdMaskLuma
+intensity-component bird birdMask birdMaskIntensity
+value-component bird birdMask birdMaskValue
+
+# Saving all the images
+
+save res/birdHistogram.jpg hist
+save res/LionHistogram.jpg histLion
+save res/blurBird50.jpg blurBird50
+save res/sharpenBird50.jpg sharpenBird50
+save res/sepiaBird50.jpg sepiaBird50
+save res/redBird50.jpg redBird50
+save res/blueBird50.jpg blueBird50
+save res/greenBird50.jpg greenBird50
+save res/lumaBird50.jpg lumaBird50
+save res/valueBird50.jpg valueBird50
+save res/intensityBird50.jpg intensityBird50
+save res/adjustedBird50.jpg adjustedBird50
+save res/adjustedBird1.jpg adjustedBird1
+save res/adjustedBird2.jpg adjustedBird2
+save res/correctedBird50.jpg correctedBird50
+save res/correctedBird.jpg correctedBird
+save res/birdCompress70.jpg birdCompress70
+save res/birdCompress30.jpg birdCompress30
+save res/birdMaskBlur.jpg birdMaskBlur
+save res/birdMaskSharpen.jpg birdMaskSharpen
+save res/birdMaskSepia.jpg birdMaskSepia
+save res/birdMaskRed.jpg birdMaskRed
+save res/birdMaskGreen.jpg birdMaskGreen
+save res/birdMaskBlue.jpg birdMaskBlue
+save res/birdMaskLuma.jpg birdMaskLuma
+save res/birdMaskIntensity.jpg birdMaskIntensity
+save res/birdMaskValue.jpg birdMaskValue

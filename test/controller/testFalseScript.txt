@@ -1,0 +1,15 @@
+load images/manhattan-small.png man
+brighten fyer man bright
+blurr man blur
+sharpen mann sharpen
+flip-horizontal man VFlip
+vertical-flip man VFlip
+sepia man sepia
+red-componen man redC
+component man greenC
+bluee-component man blueC
+puma-component man lumaC
+value-component man valueC vlase afhsdu asfh
+intensity-component man intensityC ewc ad ahdf
+rgb-split man red green
+rgb-combine red green blue
